@@ -116,6 +116,10 @@ fi
 #make sure the requirement to run kodi is met.
 #touch  /var/lock/start.retroarch
 
- #if you don't want the emulator front end to start first, comment the next 3 lines
- #rm -rf /var/lock/start.retroarch
- #/usr/bin/startfe.sh &
+#if you don't want the emulator front end to start first, comment the next 3 lines
+#rm -rf /var/lock/start.retroarch
+#/usr/bin/startfe.sh &
+touch /var/lock/start.games
+systemctl start emustation
+#rm /var/lock/start.retroarch
+systemctl stop retroarch
